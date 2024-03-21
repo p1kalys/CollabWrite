@@ -6,7 +6,7 @@ const productionUrl = process.env.PRODUCTION_URL;
 
 const io = require("socket.io")(3001, {
   cors: {
-    origin: productionUrl,
+    origin: '*',
     methods: ["GET", "POST"],
   },
 })
