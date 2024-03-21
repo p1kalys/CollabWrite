@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 const Document = require("./db/db")
 
-mongoose.connect("mongodb+srv://gibsongaleo:zSMd8MhSuHLz60LP@cluster0.hfr3ey8.mongodb.net/");
+mongoose.connect(process.env.MONGO_URL);
 
 
 const io = require("socket.io")(3001, {
