@@ -3,9 +3,10 @@ const Document = require("./db/db")
 
 mongoose.connect(process.env.MONGO_URL);
 
+
 const io = require("socket.io")(3001, {
   cors: {
-    origin: "https://sharepad-peach.vercel.app/",
+    origin: "http://localhost:3000",
     methods: ["GET", "POST"],
   },
 })
