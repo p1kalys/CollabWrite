@@ -2,11 +2,11 @@ const mongoose = require("mongoose")
 const Document = require("./db/db")
 
 mongoose.connect(process.env.MONGO_URL);
-
+const productionUrl = process.env.PRODUCTION_URL;
 
 const io = require("socket.io")(3001, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: productionUrl,
     methods: ["GET", "POST"],
   },
 })
