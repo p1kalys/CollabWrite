@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.top {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3f3f3;
+    height: 60px;
+    width: 100%;
+    padding: 15px;
+}
+
+.top p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 700;
+    list-style: none;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+.buttn {
+    padding: 8px 18px 8px 18px;
+    border: 1px solid black;
+    border-radius: 3px;
+    color: rgb(64, 64, 64);
+    font-weight: 700;
+    cursor: pointer;
+}
