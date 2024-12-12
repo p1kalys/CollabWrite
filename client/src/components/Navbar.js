@@ -1,5 +1,5 @@
 import React from "react";
-import "../components/Navbar.css";
+import "./Navbar.css";
 const Navbar = () => {
   const shareLink = () => {
     if (navigator.share) {

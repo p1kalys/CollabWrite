@@ -1,10 +1,13 @@
 const mongoose = require("mongoose")
 const Document = require("./db/db")
+require('dotenv');
+const http = require("http");
+const server = http.createServer();
 
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect("mongodb+srv://user1:4CfleVgWTdROOGUq@cluster0.kj06vzq.mongodb.net/");
 
 
-const io = require("socket.io")(3001, {
+const io = require("socket.io")(server, {
   cors: {
     origin: "http://localhost:3000",
     methods: ["GET", "POST"],
@@ -36,3 +39,8 @@ async function findOrCreateDocument(id) {
   if (document) return document
   return await Document.create({ _id: id, data: defaultValue })
 }
+
+const PORT = process.env.PORT || 3001;
+server.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
+});
