@@ -9,7 +9,7 @@ mongoose.connect(process.env.MONGO_URI);
 
 const io = require("socket.io")(server, {
   cors: {
-    origin: "https://collab-write-lac.vercel.app/",
+    origin: "https://collab-write-lac.vercel.app",
     methods: ["GET", "POST"],
   },
 })
