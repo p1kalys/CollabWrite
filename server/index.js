@@ -10,7 +10,7 @@ mongoose.connect(process.env.MONGO_URI);
 const io = require("socket.io")(server, {
   cors: {
     // origin: "http://localhost:3000",
-    origin: "https://collab-write-lac.vercel.app",
+    origin: "https://collabwrites.vercel.app",
     methods: ["GET", "POST"],
   },
 })
