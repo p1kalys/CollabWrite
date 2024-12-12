@@ -4,7 +4,7 @@ require('dotenv');
 const http = require("http");
 const server = http.createServer();
 
-mongoose.connect("mongodb+srv://user1:4CfleVgWTdROOGUq@cluster0.kj06vzq.mongodb.net/");
+mongoose.connect(process.env.MONGO_URI);
 
 
 const io = require("socket.io")(server, {
