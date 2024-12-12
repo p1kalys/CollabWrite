@@ -1,6 +1,8 @@
 import React from "react";
 import "./Navbar.css";
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
+  const navigate = useNavigate();
   const shareLink = () => {
     if (navigator.share) {
       navigator
@@ -20,9 +22,12 @@ const Navbar = () => {
       <nav>
         <div className="top">
           <p> CollabWrite </p>
+          <div>
+          <button className="buttn" onClick={() => navigate('/')}>New doc</button>
           <button className="buttn" onClick={shareLink}>
             Share
           </button>
+          </div>
         </div>
       </nav>
     </div>
