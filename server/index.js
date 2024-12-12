@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 const Document = require("./db/db")
-require('dotenv');
+require('dotenv').config();
 const http = require("http");
 const server = http.createServer();
 
