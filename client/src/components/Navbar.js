@@ -1,8 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-import { useNavigate } from "react-router-dom";
 const Navbar = () => {
-  const navigate = useNavigate();
   const shareLink = () => {
     if (navigator.share) {
       navigator
@@ -17,13 +15,17 @@ const Navbar = () => {
     }
   };
 
+  const clearCacheAndRedirect = () => {
+    window.location.replace("/");
+  };
+
   return (
     <div>
       <nav>
         <div className="top">
           <p> CollabWrite </p>
           <div>
-          <button className="buttn" onClick={() => navigate('/')}>New doc</button>
+          <button className="buttn" onClick={clearCacheAndRedirect}>New doc</button>
           <button className="buttn" onClick={shareLink}>
             Share
           </button>
